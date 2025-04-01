@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="h-[10vh] p-4 bg-pink-200 space-x-5 flex items-center justify-center">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#" id="us">ContactUs</a>
+    </div>
+
+      <div class="hidden bg-pink-100 text-black flex justify-center items-center w-[50%] mx-auto mt-5 text-xl gap-7 rounded-2xl p-8" id="form">
+        <label for="name">Name: </label> <input type="text" name="" class="border"> 
+        <br> <button class="bg-blue-200 p-3 rounded-lg">Submit</button>
+      </div>
+     
+      <div class="flex">
+
+        <img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" class="w-[50%] p-5 rounded-2xl h-[60vh]">
+       <p class="w-full p-8"> 
+        
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptatibus, reiciendis porro numquam, eligendi voluptatem necessitatibus ratione quisquam ad cumque tempore consequuntur ipsa aliquid? Reiciendis odio libero quod accusantium doloribus.
+         
+        </p>
+      </div>
+      <div class="border flex space-x-10">
+        <div class="p-5">this is a lorem of two line so be in two  <br> this is the nect line of code</div>
+        <div class="p-5">this is a lorem of two line so be in two  <br> this is the nect line of code</div>
+        <div class="p-5">this is a lorem of two line so be in two  <br> this is the nect line of code</div>
+        <div class="p-5">this is a lorem of two line so be in two  <br> this is the nect line of code</div>
+       
+        
+      </div>
+
+
+
+    
+  </body>
+
+  <script>
+    let contact = document.getElementById('us');
+    let form = document.getElementById('form');
+    contact.addEventListener('click', function(){
+      if(form.classList.contains('hidden')){
+        form.classList.remove('hidden');
+      }else{
+        form.classList.add('hidden');
+      }
+    })
+  </script>
+</html>

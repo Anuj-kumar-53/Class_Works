@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 5px; 
+        }
+        #form {
+            display: none;
+            text-align: center;
+            margin-top: 5px;
+            padding: 5px;
+
+        }
+        #add{
+            width: 200px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Welcome to the webpage</h1>
+        <button id="add">Add Text</button>
+        <button id="heading">add head</button>
+        
+    </div>
+    <div >
+        <form id="form">
+            <input type="text">
+            <input type="submit">
+        </form>
+    </div>
+
+    <script>
+        let add = document.getElementById('add');
+        let head = document.getElementById('heading');
+        let form = document.getElementById('form');
+        let div = document.getElementById('main')
+
+        add.addEventListener('click', function() {
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            }else{
+                form.style.display = 'none';
+            }
+        });
+
+        head.addEventListener('click',function(){
+            let h2 = document.createElement('h2');
+            h2.innerHTML = 'this is my h2 heading';
+            div.appendChild(h2);
+
+        })
+
+        //removeaddEventListner...And the functon name
+    </script>
+</body>
+</html>

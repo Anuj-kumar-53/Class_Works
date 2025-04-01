@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">This is the Heading</h1>
+    <button id="btn1">hi1</button>
+    <button id="btn2">hi2</button>
+    <button id="btn3">hi3</button>
+    <button id="btn4"> hi4</button>
+</body>
+</html>
+<script>
+    let Heading = document.getElementById('head');
+    let btn = document.getElementById('btn1');
+    let btn1 = document.getElementById('btn2');1
+    let btn2 = document.getElementById('btn3');
+    let btn3 = document.getElementById('btn4');
+    btn.addEventListener('click',()=>{
+        Heading.style.color = 'yellow';
+    })
+    let content = document.createElement('h2');
+    btn1.addEventListener('mouseover',()=>{
+        content.innerHTML =  'this is the new content';
+        Heading.appendChild(content);
+    })
+    btn2.addEventListener('mouseout',()=>{
+    
+        content.innerHTML = "";
+        Heading.appendChild(content);   
+    })
+    btn3.addEventListener('click',()=>{
+        let body = document.querySelector('body');
+        body.style.backgroundColor = 'blue';
+    })
+   
+
+</script>
